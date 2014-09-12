@@ -31,3 +31,7 @@ Route::get('/learn/{mode}', function($mode)
 	return View::make('learn');
 });
 
+Route::get('/profile', function($mode)
+{
+	return View::make('profile');
+});
