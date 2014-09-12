@@ -7,7 +7,7 @@
             <h3>Eingeloggt als Lukas Bindreiter</h3>
             <hr/>
             <h5>Vokabelgruppen</h5>
-            <form class="ui form segment">
+            <form class="ui form segment" method="post">
                 <div class="inline field">
                     <div class="ui checkbox">
                         <input id="group1" type="checkbox" />

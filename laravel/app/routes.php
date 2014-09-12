@@ -24,17 +24,14 @@ Route::get('/login', function()
 Route::get('/admin', function()
 {
 	return View::make('admin');
-});
+})->before('auth');
 
 Route::get('/learn/{mode?}', function($mode = 'menu')
 {
 	return View::make('learn');
-});
+})->before('auth');
 
-Route::get('/profile', function()
-{
-    return View::make('profile');
-});
+Route::controller('/profile', 'ProfileController');
 
 Route::get('/layout', function()
 {

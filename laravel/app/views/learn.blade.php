@@ -16,21 +16,21 @@
                     </div>
                 </li>
                 <li>
-                    <div class="ui raised segment"data-equalizer-watch>
+                    <div class="ui raised segment" data-equalizer-watch>
                         <div class="ui teal ribbon label">Trainieren</div>
                         <p>Lerne die Vokabeln, indem zuerst immer das deutsche Wort erscheint und danach durch klicken das englische.</p>
                         <a href="#" class="ui blue submit button">Start</a>
                     </div>
                 </li>
                 <li>
-                    <div class="ui raised segment"data-equalizer-watch>
+                    <div class="ui raised segment" data-equalizer-watch>
                         <div class="ui teal ribbon label">Üben</div>
                         <p>Lerne die Vokabeln, indem du sie selbst der Reihe nach eingibst.</p>
                         <a href="#" class="ui blue submit button">Start</a>
                     </div>
                 </li>
                 <li>
-                    <div class="ui raised segment"data-equalizer-watch>
+                    <div class="ui raised segment" data-equalizer-watch>
                         <div class="equalheight"></div>
                         <div class="ui teal ribbon label">Probetest</div>
                         <p>Fülle alle Vokablen aus und überprüfe am Ende, wieviel Prozent du richtig hast.</p>
