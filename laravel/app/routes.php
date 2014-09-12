@@ -13,5 +13,21 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('profile');
 });
+
+Route::get('/login', function()
+{
+	return View::make('login');
+});
+
+Route::get('/admin', function()
+{
+	return View::make('admin');
+});
+
+Route::get('/learn/{mode}', function($mode)
+{
+	return View::make('learn');
+});
+
