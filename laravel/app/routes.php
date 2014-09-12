@@ -31,7 +31,12 @@ Route::get('/learn/{mode?}', function($mode = 'menu')
 	return View::make('learn');
 });
 
-Route::get('/profile', function($mode)
+Route::get('/profile', function()
 {
-	return View::make('profile');
+    return View::make('profile');
+});
+
+Route::get('/layout', function()
+{
+    return View::make('layout');
 });
