@@ -9,6 +9,8 @@
 
         {{ HTML::script('vendor/foundation-5.4.0/js/vendor/jquery.js'); }}
         {{ HTML::script('vendor/foundation-5.4.0/js/foundation.min.js'); }}
+        {{ HTML::script('vendor/foundation-5.4.0/js/foundation/foundation.topbar.js'); }}
+        {{ HTML::script('vendor/foundation-5.4.0/js/foundation/foundation.equalizer.js'); }}
         {{ HTML::script('vendor/semantic/packaged/javascript/semantic.min.js'); }}
 
     </head>
