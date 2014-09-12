@@ -26,7 +26,7 @@ Route::get('/admin', function()
 	return View::make('admin');
 });
 
-Route::get('/learn/{mode}', function($mode)
+Route::get('/learn/{mode?}', function($mode = 'menu')
 {
 	return View::make('learn');
 });
