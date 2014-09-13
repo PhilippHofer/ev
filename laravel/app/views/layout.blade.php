@@ -2,17 +2,13 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>English Vocabulary</title>
         {{ HTML::style('vendor/foundation-5.4.0/css/foundation.min.css'); }}
         {{ HTML::style('vendor/semantic/packaged/css/semantic.min.css'); }}
         {{ HTML::style('css/app.css'); }}
 
-        {{ HTML::script('vendor/foundation-5.4.0/js/vendor/jquery.js'); }}
-        {{ HTML::script('vendor/foundation-5.4.0/js/foundation.min.js'); }}
-        {{ HTML::script('vendor/foundation-5.4.0/js/foundation/foundation.topbar.js'); }}
-        {{ HTML::script('vendor/foundation-5.4.0/js/foundation/foundation.equalizer.js'); }}
-        {{ HTML::script('vendor/semantic/packaged/javascript/semantic.min.js'); }}
-
+        {{ HTML::script('vendor/foundation-5.4.0/js/vendor/modernizr.js'); }}
     </head>
     <body>
 
@@ -49,6 +45,12 @@
 
 
     @show
+
+    {{ HTML::script('vendor/foundation-5.4.0/js/vendor/jquery.js'); }}
+    {{ HTML::script('vendor/foundation-5.4.0/js/foundation.min.js'); }}
+    <script>
+        $(document).foundation();
+    </script>
     </body>
 
 </html>

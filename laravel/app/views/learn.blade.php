@@ -7,7 +7,7 @@
             <h3>Vokabeln lernen</h3>
             <hr/>
 
-            <ul class="small-block-grid-2 medium-block-grid-4" data-equalizer>
+            <ul id="learn-list" class="small-block-grid-1 medium-block-grid-2 large-block-grid-4" data-equalizer>
                 <li>
                     <div class="ui raised segment" data-equalizer-watch>
                         <div class="ui teal ribbon label">Liste</div>
@@ -18,7 +18,7 @@
                 <li>
                     <div class="ui raised segment" data-equalizer-watch>
                         <div class="ui teal ribbon label">Trainieren</div>
-                        <p>Lerne die Vokabeln, indem zuerst immer das deutsche Wort erscheint und danach durch klicken das englische.</p>
+                        <p>Lerne die Vokabeln, indem zuerst immer das deutsche Wort erscheint und danach durch klicken das englische. </p>
                         <a href="#" class="ui blue submit button">Start</a>
                     </div>
                 </li>
@@ -34,7 +34,7 @@
                         <div class="equalheight"></div>
                         <div class="ui teal ribbon label">Probetest</div>
                         <p>Fülle alle Vokablen aus und überprüfe am Ende, wieviel Prozent du richtig hast.</p>
-                        <a href="#" class="ui blue submit button">Start</a>
+                        <a href="#" class="cta-button ui blue submit button">Start</a>
                     </div>
                 </li>
             </ul>

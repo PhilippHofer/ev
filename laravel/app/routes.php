@@ -29,7 +29,7 @@ Route::get('/admin', function()
 Route::get('/learn/{mode?}', function($mode = 'menu')
 {
 	return View::make('learn');
-})->before('auth');
+})/*->before('auth')*/;
 
 Route::controller('/profile', 'ProfileController');
 

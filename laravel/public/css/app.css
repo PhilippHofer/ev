@@ -1,3 +1,16 @@
 body{
     background-image: url('../img/bg.jpg');
 }
+
+#learn-list{
+    position: relative;
+}
+
+#learn-list li div.segment{
+    padding-bottom: 70px;
+}
+
+#learn-list a{
+    position: absolute;
+    bottom: 20px;
+}
