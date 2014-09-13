@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="small-12 small-centered column">
-        <div class="panel">
+        <div class="ui segment">
             <h3>Eingeloggt als Lukas Bindreiter</h3>
             <hr/>
             <h5>Vokabelgruppen</h5>

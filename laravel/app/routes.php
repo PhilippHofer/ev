@@ -28,7 +28,20 @@ Route::get('/admin', function()
 
 Route::get('/learn/{mode?}', function($mode = 'menu')
 {
-	return View::make('learn');
+    if($mode == 'menu'){
+        return View::make('learn');
+    } else if($mode =='list') {
+        return View::make('learn.list');
+    } else if($mode =='train') {
+        return View::make('learn.train');
+    } else if($mode =='practice') {
+        return View::make('learn.practice');
+    } else if($mode =='test') {
+        return View::make('learn.test');
+    } else {
+        App:abort(404);
+    }
+
 })/*->before('auth')*/;
 
 Route::controller('/profile', 'ProfileController');

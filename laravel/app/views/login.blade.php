@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="small-12 small-centered column">
-        <div class="panel">
+        <div class="ui segment">
             <h3>Login</h3>
             <form class="ui form segment">
                 <div class="field">
