@@ -18,6 +18,8 @@ Route::get('/', function()
 
 Route::controller('/login', 'LoginController');
 
+Route::controller('/logout', 'LogoutController');
+
 Route::get('/admin', function()
 {
 	return View::make('admin');

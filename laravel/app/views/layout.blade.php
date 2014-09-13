@@ -37,7 +37,16 @@
                 </li>
             </ul>
             <ul class="right"> <!-- Right Nav Section -->
-                <li><a href="{{ URL::to('login') }}">Login</a></li>
+                <?php
+                //TODO: href richtig anpassen (URL::to....)
+                    if (Auth::check())
+                    {
+                        echo "<li><a href=\"logout\">Logout (".Auth::user()->username.")</a></li>";
+                    }else{
+                        echo "<li><a href=\"login\">Login</a></li>";
+                    }
+                ?>
+                
             </ul>
 
 
