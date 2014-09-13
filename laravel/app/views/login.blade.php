@@ -1,6 +1,20 @@
 @extends('layout')
 
 @section('content')
+
+@if(Session::has('message'))
+<div class="ui error message">
+  <i class="close icon"></i>
+  <div class="header">
+    Login failed!
+  </div>
+  <ul class="list">
+    <li>wrong username or</li>
+    <li>wrong password</li>
+  </ul>
+</div>
+@endif
+
 <div class="row">
     <div class="small-12 small-centered column">
         <div class="ui segment">
