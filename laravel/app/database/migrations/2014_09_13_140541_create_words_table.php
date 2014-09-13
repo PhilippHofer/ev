@@ -13,15 +13,12 @@ class CreateWordsTable extends Migration {
 	public function up()
 	{
 		Schema::create('words', function($t) {
-                $t->integer('word_id');
-                $t->integer('group_id');
-                $t->char('english',100);
-                $t->char('german',100);
-
-
-                $t->timestamps();
-
-                $t->primary('word_id');
+            $t->increments('id');
+            $t->integer('group_id')->unsigned();
+            $t->char('english',100);
+            $t->char('german',100);
+            $t->timestamps();
+            $t->foreign('group_id')->references('id')->on('groups');
         });
 	}
 

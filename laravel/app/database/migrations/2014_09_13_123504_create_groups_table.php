@@ -13,12 +13,10 @@ class CreateGroupsTable extends Migration {
 	public function up()
 	{
 		Schema::create('groups', function($t) {
-                $t->integer('group_id');
-                $t->char('name',20);
+            $t->increments('id');
+            $t->char('name',20);
 
-                $t->timestamps();
-
-                $t->primary('group_id');
+            $t->timestamps();
         });
 	}
 
