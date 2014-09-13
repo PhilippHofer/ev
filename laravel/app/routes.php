@@ -14,12 +14,9 @@
 Route::get('/', function()
 {
 	return View::make('profile');
-});
+})->before('auth');
 
-Route::get('/login', function()
-{
-	return View::make('login');
-});
+Route::controller('/login', 'LoginController');
 
 Route::get('/admin', function()
 {
@@ -42,11 +39,11 @@ Route::get('/learn/{mode?}', function($mode = 'menu')
         App:abort(404);
     }
 
-})/*->before('auth')*/;
+})->before('auth');
 
 Route::controller('/profile', 'ProfileController');
 
 Route::get('/layout', function()
 {
     return View::make('layout');
-});
+})->before('auth');
