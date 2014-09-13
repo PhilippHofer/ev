@@ -18,7 +18,7 @@
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
-                <h1><a href="{{ URL::to('') }}">My Site</a></h1>
+                <h1><a href="#" style="cursor: default;">English Vocabulary</a></h1>
             </li>
             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -26,7 +26,15 @@
         <section class="top-bar-section">
             <ul class="left"> <!-- Left Nav Section -->
                 <li><a href="{{ URL::to('profile') }}">Profil</a></li>
-                <li><a href="{{ URL::to('learn') }}">Lernen</a></li>
+                <li class="has-dropdown">
+                    <a href="{{ URL::to('learn') }}">Lernen</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ URL::to('learn/list') }}">Liste</a></li>
+                        <li><a href="{{ URL::to('learn/train') }}">Trainieren</a></li>
+                        <li><a href="{{ URL::to('learn/practice') }}">Üben</a></li>
+                        <li><a href="{{ URL::to('learn/test') }}">Probetest</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="right"> <!-- Right Nav Section -->
                 <li><a href="{{ URL::to('login') }}">Login</a></li>

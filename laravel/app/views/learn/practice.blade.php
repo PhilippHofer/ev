@@ -6,6 +6,7 @@
         <div class="ui segment">
             <h3>Vokabeln üben</h3>
             <hr/>
+
             <a href="{{ URL::to('learn') }}" class="ui green submit button">Fertig</a>
         </div>
     </div>
