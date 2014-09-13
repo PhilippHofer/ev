@@ -13,12 +13,13 @@ class CreateUserGroupTable extends Migration {
 	public function up()
 	{
 		Schema::create('user_group', function($t) {
-                $t->integer('user_id');
-                $t->integer('group_id');
-                $t->boolean('activated');
-                $t->timestamps();
+            $t->integer('user_id')->unsigned();
+            $t->integer('group_id')->unsigned();
+            $t->boolean('activated');
 
-                $t->primary(array('user_id', 'group_id'));
+            $t->primary(array('user_id', 'group_id'));
+            $t->foreign('user_id')->references('id')->on('users');
+            $t->foreign('group_id')->references('id')->on('groups');
         });
 	}
 
