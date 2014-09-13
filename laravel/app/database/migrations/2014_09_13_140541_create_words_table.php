@@ -13,8 +13,8 @@ class CreateWordsTable extends Migration {
 	public function up()
 	{
 		Schema::create('words', function($t) {
-                $t->decimal('word_id',10,0);
-                $t->decimal('group_id',10,0);
+                $t->int('word_id');
+                $t->int('group_id');
                 $t->char('english',100);
                 $t->char('german',100);
 
