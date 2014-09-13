@@ -64,6 +64,10 @@
     {{ HTML::script('vendor/foundation-5.4.0/js/foundation.min.js'); }}
     <script>
         $(document).foundation();
+
+        $(".close.icon").click(function(){
+           $(this).parent().hide();
+        });
     </script>
     </body>
 

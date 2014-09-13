@@ -17,7 +17,7 @@ class LoginController extends BaseController {
 		{
 		    return Redirect::intended('profile');
 		}else{
-			return Redirect::intended('login')->with('message', 'Login Failed');
+			return Redirect::intended('login')->with('status', 'error')->with('message', 'Falscher Benutzername oder falsches Passwort');
 		}
 	}
 

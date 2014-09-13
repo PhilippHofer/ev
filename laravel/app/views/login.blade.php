@@ -2,22 +2,18 @@
 
 @section('content')
 
-@if(Session::has('message'))
-<div class="ui error message">
-  <i class="close icon"></i>
-  <div class="header">
-    Login failed!
-  </div>
-  <ul class="list">
-    <li>wrong username or</li>
-    <li>wrong password</li>
-  </ul>
-</div>
-@endif
-
 <div class="row">
     <div class="small-12 small-centered column">
         <div class="ui segment">
+            @if(Session::has('message'))
+            <div class="ui {{ Session::get('status') }} message">
+                <i class="close icon"></i>
+                <div class="header">
+                    {{ Session::get('message') }}
+                </div>
+            </div>
+            @endif
+
             <h3>Login</h3>
             {{ Form::open(array('url' => 'login', 'method' => 'post', 'class' => 'ui form segment')) }}
                 <div class="field">

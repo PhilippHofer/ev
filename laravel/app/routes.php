@@ -25,14 +25,32 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
-Route::get('/changePw', function()
+Route::post('/changePw', function()
 {
-    /*$pw = Input::get("pw");
-    $user = User::find(1)->where('username', '=', Auth::user()->username);
-    $user->password = Hash::make($pw);
-    $user->save();*/
+    $oldPW = Input::get("oldPW");
+    $newPW1 = Input::get("newPW1");
+    $newPW2 = Input::get("newPW2");
 
-    return View::make('profile')->with('message','password change successful!');
+    $name = Auth::user()->username;
+
+    if(Auth::validate(array('username' => $name, 'password' => $oldPW )))
+    {
+        if(strlen($newPW1) < 4) {
+            return Redirect::intended('profile')->with('status', 'error')->with('message', 'Das Passwort muss mindestens 4 Zeichen lang sein');
+        }
+        if(strcmp($newPW1, $newPW2) == 0) {
+            $user = User::find(Auth::user()->id);
+            $user->password = Hash::make($newPW1);
+            $user->save();
+            return Redirect::intended('profile')->with('status', 'success')->with('message', 'Das Passwort wurde erfolgreich geändert');
+        } else {
+            return Redirect::intended('profile')->with('status', 'error')->with('message', 'Die eingegebenen Passwörter stimmen nicht überein');
+        }
+
+    } else {
+        return Redirect::intended('profile')->with('status', 'error')->with('message', 'Das eingegebene Passwort stimmt nicht');
+    }
+
 })->before('auth');
 
 Route::get('/learn/{mode?}', function($mode = 'menu')
