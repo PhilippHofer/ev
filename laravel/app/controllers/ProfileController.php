@@ -13,8 +13,9 @@ class ProfileController extends BaseController {
 		$groups_checked = Input::get('group');
 		if(is_array($groups_checked))
 		{
-		   echo $groups_checked;
+			
 		}
+		
 	    return View::make('profile');
 	}
 }
