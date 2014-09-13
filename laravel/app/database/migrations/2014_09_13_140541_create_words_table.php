@@ -14,8 +14,10 @@ class CreateWordsTable extends Migration {
 	{
 		Schema::create('words', function($t) {
                 $t->decimal('word_id',10,0);
+                $t->decimal('group_id',10,0);
                 $t->char('english',100);
                 $t->char('german',100);
+
 
                 $t->timestamps();
 

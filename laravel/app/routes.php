@@ -25,6 +25,12 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
+Route::get('/changePw', function()
+{
+    return View::make('changePw');
+})->before('auth');
+
+
 Route::get('/learn/{mode?}', function($mode = 'menu')
 {
     if($mode == 'menu'){

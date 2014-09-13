@@ -42,6 +42,7 @@
                     if (Auth::check())
                     {
                         echo "<li><a href=\"logout\">Logout (".Auth::user()->username.")</a></li>";
+                        echo "<li><a href=\"changePw\">Passwort ändern</a></li>";
                     }else{
                         echo "<li><a href=\"login\">Login</a></li>";
                     }
