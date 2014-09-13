@@ -25,8 +25,15 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
+Route::get('/changePw', function()
+{
+    /*$pw = Input::get("pw");
+    $user = User::find(1)->where('username', '=', Auth::user()->username);
+    $user->password = Hash::make($pw);
+    $user->save();*/
 
-Route::controller('/changePw', 'ChangePasswordController');
+    return View::make('profile')->with('message','password change successful!');
+})->before('auth');
 
 Route::get('/learn/{mode?}', function($mode = 'menu')
 {
