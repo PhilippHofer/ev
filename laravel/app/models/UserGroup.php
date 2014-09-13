@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Group extends Eloquent implements UserInterface, RemindableInterface {
+class UserGroup extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -14,7 +14,7 @@ class Group extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'groups';
+	protected $table = 'user_group';
 
 	/**
 	 * The attributes excluded from the model's JSON form.

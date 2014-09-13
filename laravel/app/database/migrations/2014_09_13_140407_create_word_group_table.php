@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGroupsTable extends Migration {
+class CreateWordGroupTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreateGroupsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('groups', function($t) {
+		Schema::create('word_group', function($t) {
                 $t->decimal('group_id',10,0);
-                $t->char('name',20);
+                $t->decimal('word_id',10,0);
 
                 $t->timestamps();
 
-                $t->primary('group_id');
+                $t->primary(array('group_id','word_id'));
         });
 	}
 
@@ -29,7 +29,7 @@ class CreateGroupsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('groups');
+		Schema::drop('word_group');
 	}
 
 }

@@ -25,9 +25,9 @@ class ProfileController extends BaseController {
 	}
 
 	private function addGroup($group){
-		$user_id = 0;
+		$user_id = Auth::user()->id;
 
-		$groupEntry = new Group;
+		$groupEntry = new UserGroup;
 		$groupEntry->user_id = $user_id;
 		$groupEntry->group_id = $group;
 		$groupEntry->activated = 1;
@@ -36,8 +36,8 @@ class ProfileController extends BaseController {
 	}
 
 	private function removeAllGroups(){
-		$user_id = 0;
-		$groups = Group::where('user_id', '=', $user_id)->delete();
+		$user_id = Auth::user()->id;
+		$groups = UserGroup::where('user_id', '=', $user_id)->delete();
 	}
 
 	

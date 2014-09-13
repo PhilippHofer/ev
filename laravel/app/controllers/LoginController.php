@@ -16,6 +16,8 @@ class LoginController extends BaseController {
 		if (Auth::attempt(array('username' => $name, 'password' => $pw)))
 		{
 		    return Redirect::intended('profile');
+		}else{
+			return Redirect::intended('login');
 		}
 	}
 
