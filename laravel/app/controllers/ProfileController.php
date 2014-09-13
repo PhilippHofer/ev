@@ -44,6 +44,4 @@ class ProfileController extends BaseController {
 		$user_id = Auth::user()->id;
 		$groups = UserGroup::where('user_id', '=', $user_id)->delete();
 	}
-
-	
 }
