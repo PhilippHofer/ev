@@ -6,13 +6,16 @@ class GroupController extends BaseController {
     {
         $action = $_GET['action'];
         $id = $_GET['id'];
-        $to = $_GET['to'];
 
         if($action == "update"){
+        	$to = $_GET['to'];
 			$groupEntry = Group::find($id);
 			$groupEntry->name = $to;
 
 			$groupEntry->save();
+        }else if($action == "delete"){
+        	$groupEntry = Group::find($id);
+        	$groupEntry->delete();
         }
 
         return View::make('admin');

@@ -23,10 +23,10 @@
 				    <?php
 		            	$groups = Group::all();
 						foreach($groups as $group){
-							echo "<tr>";
+							echo "<tr id='row".$group->id."''>";
 								echo "<td><div id=".$group->id.">".$group->name."</div></td>";
-								echo '<td><div id="edit'.$group->id.'"><div class="ui button"onclick="editGroup('.$group->id.');"><i class="edit icon"></i></div></div></td>';
-								echo '<td><div class="ui button"><i class="remove icon"></i></div></td>';
+								echo '<td><div id="edit'.$group->id.'"><div class="ui button" onclick="editGroup('.$group->id.');"><i class="edit icon"></i></div></div></td>';
+								echo '<td><div class="ui button" onclick="deleteGroup('.$group->id.');"><i class="remove icon"></i></div></td>';
 							echo "</tr>";
 						}
 		      		?>
@@ -66,6 +66,12 @@ function saveGroup(counter){
 	$("#edit"+counter).empty().append('<div class="ui button"onclick="editGroup('+counter+');"><i class="edit icon"></i></div>');
 	$("#"+counter).empty().append(text);
 	$.get( "changeGroup?action=update&id="+counter+"&to="+text, function( data ) {
+	});
+}
+
+function deleteGroup(counter){
+	$('#row'+counter).remove();
+	$.get( "changeGroup?action=delete&id="+counter, function( data ) {
 	});
 }
 </script>
