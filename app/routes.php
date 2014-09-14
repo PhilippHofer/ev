@@ -108,4 +108,4 @@ Route::get('/layout', function()
 Route::get('json/words', 'JsonController@allWords');
 
 /* return all words of the groups, the current user has selected as json*/
-Route::get('json/words/user/{box?}', 'JsonController@userWords')->before('auth')->where('box', '[0-9]+');
+Route::get('json/words/box/{box?}', 'JsonController@userWords')->before('auth')->where('box', '[0-9]+');
