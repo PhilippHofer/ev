@@ -9,20 +9,25 @@
             <h2>Groups</h2>
             <table class="ui table segment">
 			  <thead>
-			    <tr><th>Name</th>
+			    <tr>
+			    	<th>Name</th>
+			    	<th>Edit</th>
+			    	<th>Delete</th>
 			  </tr></thead>
 			  <tbody>
 			    <?php
 	            	$groups = Group::all();
 					foreach($groups as $group){
 						echo "<tr>";
-						echo "<td>".$group->name."</td>";
+							echo "<td>".$group->name."</td>";
+							echo '<td><div class="ui button"><i class="edit icon"></i></div></td>';
+							echo '<td><div class="ui button"><i class="remove icon"></i></div></td>';
 						echo "</tr>";
 					}
 	      		?>
 			  </tbody>
 			  <tfoot>
-			    <tr><th>
+			    <tr><th colspan="3">
 			      <div class="ui blue labeled icon button"><i class="lab icon"></i> Add Group</div>
 			    </th>
 			  </tr></tfoot>

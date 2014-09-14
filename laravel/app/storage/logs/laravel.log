@@ -1,0 +1,402 @@
+[2014-09-13 15:16:38] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:17:35] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:18:27] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:18:58] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:20:58] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:23:54] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:31:44] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:34:55] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function abort()' in C:\xampp\htdocs\EV\laravel\app\routes.php:47
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 15:35:09] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:35:34] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:45:30] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant username - assumed 'username'' in C:\xampp\htdocs\EV\laravel\app\routes.php:31
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\app\routes.php(31): Illuminate\Exception\Handler->handleError(8, 'Use of undefine...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 [internal function]: {closure}()
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5335): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5001): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:45:48] local.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::save()' in C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2117
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('save', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->save()
+#2 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(913): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\EV\laravel\app\routes.php(33): Illuminate\Database\Eloquent\Builder->__call('save', Array)
+#4 C:\xampp\htdocs\EV\laravel\app\routes.php(33): Illuminate\Database\Eloquent\Builder->save()
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5335): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5001): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#17 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#18 {main} [] []
+[2014-09-13 15:48:18] local.ERROR: exception 'BadMethodCallException' with message 'Call to undefined method Illuminate\Database\Query\Builder::save()' in C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php:2117
+Stack trace:
+#0 [internal function]: Illuminate\Database\Query\Builder->__call('save', Array)
+#1 [internal function]: Illuminate\Database\Query\Builder->save()
+#2 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(913): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\EV\laravel\app\routes.php(33): Illuminate\Database\Eloquent\Builder->__call('save', Array)
+#4 C:\xampp\htdocs\EV\laravel\app\routes.php(33): Illuminate\Database\Eloquent\Builder->save()
+#5 [internal function]: {closure}()
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5335): call_user_func_array(Object(Closure), Array)
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5001): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#12 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#13 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#14 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#15 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#16 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#17 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#18 {main} [] []
+[2014-09-13 15:49:34] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:49:52] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:50:27] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:53:33] local.ERROR: exception 'Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException' in C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php:5717
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5712): Illuminate\Routing\RouteCollection->methodNotAllowed(Array)
+#1 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5690): Illuminate\Routing\RouteCollection->getOtherMethodsRoute(Object(Illuminate\Http\Request), Array)
+#2 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(5009): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#3 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4997): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#4 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(4989): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(717): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(698): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(7711): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8314): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(8261): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(10900): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(659): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 C:\xampp\htdocs\EV\laravel\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 C:\xampp\htdocs\EV\laravel\server.php(19): require_once('C:\\xampp\\htdocs...')
+#14 {main} [] []
+[2014-09-13 15:57:51] local.ERROR: exception 'ErrorException' with message 'include(C:\xampp\htdocs\EV\laravel/app/database/migrations/2014_09_13_140407_create_word_group_table.php): failed to open stream: No such file or directory' in C:\xampp\htdocs\EV\laravel\vendor\composer\ClassLoader.php:382
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\vendor\composer\ClassLoader.php(382): Illuminate\Exception\Handler->handleError(2, 'include(C:\\xamp...', 'C:\\xampp\\htdocs...', 382, Array)
+#1 C:\xampp\htdocs\EV\laravel\vendor\composer\ClassLoader.php(382): Composer\Autoload\includeFile()
+#2 C:\xampp\htdocs\EV\laravel\vendor\composer\ClassLoader.php(274): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('CreateWordGroup...')
+#4 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(299): spl_autoload_call('CreateWordGroup...')
+#5 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(190): Illuminate\Database\Migrations\Migrator->resolve('2014_09_13_1404...')
+#6 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Migrations\Migrator.php(170): Illuminate\Database\Migrations\Migrator->runDown(Object(stdClass), false)
+#7 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\ResetCommand.php(61): Illuminate\Database\Migrations\Migrator->rollback(false)
+#8 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(112): Illuminate\Database\Console\Migrations\ResetCommand->fire()
+#9 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(128): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\RefreshCommand.php(40): Illuminate\Console\Command->call('migrate:reset', Array)
+#13 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(112): Illuminate\Database\Console\Migrations\RefreshCommand->fire()
+#14 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\RefreshCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\EV\laravel\artisan(59): Symfony\Component\Console\Application->run()
+#20 {main} [] []
+[2014-09-13 15:57:59] local.ERROR: exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'' in C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:344
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(344): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(592): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `gr...', Array)
+#2 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(556): Illuminate\Database\Connection->runQueryCallback('insert into `gr...', Array, Object(Closure))
+#3 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(345): Illuminate\Database\Connection->run('insert into `gr...', Array, Object(Closure))
+#4 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(302): Illuminate\Database\Connection->statement('insert into `gr...', Array)
+#5 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `gr...', Array)
+#6 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1855): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `gr...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(913): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6829): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6829): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6819): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6776): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#13 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6445): Illuminate\Database\Eloquent\Model->save()
+#14 C:\xampp\htdocs\EV\laravel\app\database\seeds\GroupTableSeeder.php(18): Illuminate\Database\Eloquent\Model::create(Array)
+#15 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(37): GroupTableSeeder->run()
+#16 C:\xampp\htdocs\EV\laravel\app\database\seeds\DatabaseSeeder.php(17): Illuminate\Database\Seeder->call('GroupTableSeede...')
+#17 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Console\SeedCommand.php(57): DatabaseSeeder->run()
+#18 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#19 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\xampp\htdocs\EV\laravel\artisan(59): Symfony\Component\Console\Application->run()
+#25 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY' (SQL: insert into `groups` (`name`, `updated_at`, `created_at`) values (House, mouse ..., 2014-09-13 15:57:59, 2014-09-13 15:57:59))' in C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php:600
+Stack trace:
+#0 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(556): Illuminate\Database\Connection->runQueryCallback('insert into `gr...', Array, Object(Closure))
+#1 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(345): Illuminate\Database\Connection->run('insert into `gr...', Array, Object(Closure))
+#2 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Connection.php(302): Illuminate\Database\Connection->statement('insert into `gr...', Array)
+#3 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `gr...', Array)
+#4 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1855): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `gr...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(913): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6829): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6829): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6819): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6776): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 C:\xampp\htdocs\EV\laravel\bootstrap\compiled.php(6445): Illuminate\Database\Eloquent\Model->save()
+#12 C:\xampp\htdocs\EV\laravel\app\database\seeds\GroupTableSeeder.php(18): Illuminate\Database\Eloquent\Model::create(Array)
+#13 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Seeder.php(37): GroupTableSeeder->run()
+#14 C:\xampp\htdocs\EV\laravel\app\database\seeds\DatabaseSeeder.php(17): Illuminate\Database\Seeder->call('GroupTableSeede...')
+#15 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Database\Console\SeedCommand.php(57): DatabaseSeeder->run()
+#16 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(112): Illuminate\Database\Console\SeedCommand->fire()
+#17 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(252): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\xampp\htdocs\EV\laravel\vendor\laravel\framework\src\Illuminate\Console\Command.php(100): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(889): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(193): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\SeedCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\xampp\htdocs\EV\laravel\vendor\symfony\console\Symfony\Component\Console\Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\xampp\htdocs\EV\laravel\artisan(59): Symfony\Component\Console\Application->run()
+#23 {main} [] []
+[2014-09-13 16:00:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'UserGroup' not found' in C:\xampp\htdocs\EV\laravel\app\controllers\ProfileController.php:45
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:00:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'UserGroup' not found' in C:\xampp\htdocs\EV\laravel\app\controllers\ProfileController.php:45
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:00:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'UserGroup' not found' in C:\xampp\htdocs\EV\laravel\app\controllers\ProfileController.php:45
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:02:24] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'UserGroup' not found' in C:\xampp\htdocs\EV\laravel\app\controllers\ProfileController.php:45
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:04:44] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'UserGroup' not found' in C:\xampp\htdocs\EV\laravel\app\controllers\ProfileController.php:45
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:21:30] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\xampp\htdocs\EV\laravel\app\storage\views\064f7581e3c12a4d7d379031ed10a92a:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:22:31] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\xampp\htdocs\EV\laravel\app\storage\views\064f7581e3c12a4d7d379031ed10a92a:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:22:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\xampp\htdocs\EV\laravel\app\storage\views\064f7581e3c12a4d7d379031ed10a92a:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:22:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in C:\xampp\htdocs\EV\laravel\app\storage\views\064f7581e3c12a4d7d379031ed10a92a:11
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2014-09-13 16:23:06] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file' in C:\xampp\htdocs\EV\laravel\app\storage\views\064f7581e3c12a4d7d379031ed10a92a:19
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
