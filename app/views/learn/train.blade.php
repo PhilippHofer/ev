@@ -11,10 +11,14 @@
     display: inline-block;
     width: 200px;
     height: 50px;
-    background-color: green;
+    background-color: white;
 }
-.eins{
-	position: relative;
+.visible.content{
+    position: absolut;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    background-color: white;
 }
 </style>
 
@@ -23,12 +27,19 @@
         <div class="ui segment">
             <h3>Vokabeln Trainieren</h3>
             <hr/>
-            <div id="eins">
-				<div class="ui move right reveal">
-				    <span class="visible content">test</span>
-	 				<span class="hidden content">hallo</span>
-				</div>
-			</div>
+            <?php
+            	$groups = Auth::user()->groups;
+                $counter = 0;
+                foreach($groups as $group) {
+                	foreach($group->words as $word){
+                		echo '<div class="ui move reveal">';
+                		echo '<span class="visible content">'.$word->german.'</span>';
+                		echo '<span class="hidden content">'.$word->english.'</span>';
+                		echo '</div><br />';
+                	}
+                }
+            ?>
+			<br /><br />
             <a href="{{ URL::to('learn') }}" class="ui teal submit button">Fertig</a>
         </div>
     </div>
