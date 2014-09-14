@@ -120,7 +120,11 @@
                 }
 
                 function correctInput($input, $correct){
-                    return(strcmp(strtolower($input),strtolower($correct)));
+                    $input = str_replace(' ', '', $input);
+                    $correct = str_replace(' ', '', $correct);
+                    similar_text(strtolower($input), strtolower($correct), $percent);
+                    if($percent>=80) return(false);
+                    else return(true);
                 }
             ?>
 
