@@ -20,6 +20,8 @@ Route::controller('/login', 'LoginController');
 
 Route::controller('/logout', 'LogoutController');
 
+Route::controller('/changeGroup', 'GroupController');
+
 Route::get('/admin', function()
 {
 	return View::make('admin');
