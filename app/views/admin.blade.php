@@ -4,6 +4,7 @@
 <div class="row">
     <div class="small-12 small-centered column">
         <div class="ui segment">
+            @if(Auth::user() != null && Auth::user()->admin == 1)
             <h1>Admin</h1>
 
             <div class="ui accordion">
@@ -73,6 +74,12 @@
 				</div>
 			  </div>
 			</div>
+            @else
+            <h2>Keine Berechtigung</h2>
+            <hr/>
+            Du hast keine Berechtigung, diese Seite aufzurufen!
+            @endif
+
 
 
         </div>

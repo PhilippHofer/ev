@@ -17,7 +17,8 @@ class UserTableSeeder extends Seeder {
         ));
         User::create(array(
             'username' => 'Lukas Bindreiter',
-            'password' => Hash::make('admin')
+            'password' => Hash::make('admin'),
+            'admin' => true
         ));
         User::create(array(
             'username' => 'Michael Hader',
@@ -29,7 +30,8 @@ class UserTableSeeder extends Seeder {
         ));
         User::create(array(
             'username' => 'Philipp Hofer',
-            'password' => Hash::make('admin')
+            'password' => Hash::make('admin'),
+            'admin' => true
         ));
         User::create(array(
             'username' => 'Leo Jungmann',
