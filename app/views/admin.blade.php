@@ -12,7 +12,7 @@
 			    Groups
 			  </div>
 			  <div class="active content">
-			    <table class="ui table segment">
+			    <table class="ui table segment" id="wholeTable">
 				  <thead>
 				    <tr>
 				    	<th>Name</th>
@@ -33,7 +33,10 @@
 				  </tbody>
 				  <tfoot>
 				    <tr><th colspan="3">
-				      <div class="ui blue labeled icon button"><i class="lab icon"></i> Add Group</div>
+				   	  <div id="insertGroupTextField"></div>
+				      <div id="insertGroupButton">
+				      	<div class="ui blue labeled icon button" onclick="insertGroup();"><i class="lab icon"></i> Add Group</div>
+				      </div>
 				    </th>
 				  </tr></tfoot>
 				</table>
@@ -72,6 +75,23 @@ function saveGroup(counter){
 function deleteGroup(counter){
 	$('#row'+counter).remove();
 	$.get( "changeGroup?action=delete&id="+counter, function( data ) {
+	});
+}
+
+function insertGroup(){
+	$("#insertGroupTextField").empty().append('<input id="insertGroupText" type="text"/>');
+	$("#insertGroupButton").empty().append('<div class="ui blue labeled icon button" onclick="insertGroupReally();"><i class="save icon"></i> Add Group</div>');
+
+}
+
+function insertGroupReally(){
+	var text = $("#insertGroupText").val();
+
+	$("#insertGroupTextField").empty();
+	$("#insertGroupButton").empty().append('<div class="ui blue labeled icon button" onclick="insertGroup();"><i class="lab icon"></i> Add Group</div>');
+
+	$.get( "changeGroup?action=insert&name="+text, function( data ) {
+		location.reload();
 	});
 }
 </script>
