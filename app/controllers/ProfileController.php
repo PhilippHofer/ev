@@ -16,32 +16,10 @@ class ProfileController extends BaseController {
 
 	public function postIndex()
 	{
-		$this->removeAllGroups();
-		$groups_checked = Input::get('group');
-		if(is_array($groups_checked))
-		{
-			foreach($groups_checked as $group){
-				$this->addGroup($group);
-			}
-		}
-
-
+        /* Delete all groups of current user */
+		$groups = Input::get('group');
+        Auth::user()->groups()->sync($groups);
+        
 	    return View::make('profile');
-	}
-
-	private function addGroup($group){
-		$user_id = Auth::user()->id;
-
-		$groupEntry = new UserGroup;
-		$groupEntry->user_id = $user_id;
-		$groupEntry->group_id = $group;
-		$groupEntry->activated = 1;
-
-		$groupEntry->save();
-	}
-
-	private function removeAllGroups(){
-		$user_id = Auth::user()->id;
-		$groups = UserGroup::where('user_id', '=', $user_id)->delete();
 	}
 }

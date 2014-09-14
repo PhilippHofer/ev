@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder {
 
         $this->call('WordTableSeeder');
         $this->command->info('Word table seeded!');
+
+        $this->call('UserGroupTableSeeder');
+        $this->command->info('User-Group relations seeded!');
 	}
 
 }

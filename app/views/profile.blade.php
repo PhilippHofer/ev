@@ -15,46 +15,30 @@
             @endif
 
 
-            <h3>Eingeloggt als Lukas Bindreiter</h3>
+            <h3>Eingeloggt als {{ Auth::user()->username }}</h3>
             <hr/>
             <h5>Vokabelgruppen</h5>
             {{ Form::open(array('url' => 'profile', 'method' => 'post', 'class' => 'ui form segment')) }}
-                <div class="inline field">
-                    <div class="ui checkbox">
-                        <input tabindex="1" name="group[]" id="group1" type="checkbox" value="1"/>
-                        <label for="group1">Des san de Gruppn!</label>
+            <?php
+                $groups = Group::all();
+                $i = 1;
+                foreach($groups as $group){
+                    $checked = '';
+                    foreach($group->users as $user){
+                        if($user->id == Auth::user()->id)
+                            $checked = 'checked';
+                    }
+            ?>
+                    <div class="inline field">
+                        <div class="ui toggle checkbox">
+                            <input tabindex="{{$i}}" name="group[]" id="group{{$i}}" type="checkbox"  value="{{$group->id}}" {{$checked}}/>
+                            <label for="group{{$i}}">{{{ $group->name }}}</label>
+                        </div>
                     </div>
-                </div>
-                <div class="inline field">
-                    <div class="ui checkbox">
-                        <input tabindex="2" name="group[]" id="group2" type="checkbox"  value="2"/>
-                        <label for="group2">Sog ma bitte</label>
-                    </div>
-                </div>
-                <div class="inline field">
-                    <div class="ui slider checkbox">
-                        <input tabindex="3" name="group[]" id="group3" type="checkbox"  value="3"/>
-                        <label for="group3">woiche Checkbox am besten ausschaut! :D</label>
-                    </div>
-                </div>
-                <div class="inline field">
-                    <div class="ui slider checkbox">
-                        <input tabindex="4" name="group[]" id="group4" type="checkbox"  value="4"/>
-                        <label for="group4">Gruppe 1</label>
-                    </div>
-                </div>
-                <div class="inline field">
-                    <div class="ui toggle checkbox">
-                        <input tabindex="5" name="group[]" id="group5" type="checkbox"  value="5"/>
-                        <label for="group5">Gruppe 2</label>
-                    </div>
-                </div>
-                <div class="inline field">
-                    <div class="ui toggle checkbox">
-                        <input tabindex="6" name="group[]" id="group6" type="checkbox"  value="6"/>
-                        <label for="group6">Gruppe 3</label>
-                    </div>
-                </div>
+            <?php
+                    $i = $i + 1;
+                }
+            ?>
 
                 <hr/>
 

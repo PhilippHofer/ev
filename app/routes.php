@@ -25,6 +25,7 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
+
 Route::post('/changePw', function()
 {
     $oldPW = Input::get("oldPW");
@@ -77,3 +78,9 @@ Route::get('/layout', function()
 {
     return View::make('layout');
 })->before('auth');
+
+/* return all words of the specified groups in json*/
+Route::get('json/words', 'JsonController@allWords');
+
+/* return all words of the groups, the current user has selected as json*/
+Route::get('json/words/user/{box?}', 'JsonController@userWords')->before('auth')->where('box', '[0-9]+');

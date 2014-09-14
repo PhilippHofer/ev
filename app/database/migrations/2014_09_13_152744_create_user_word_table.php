@@ -20,8 +20,8 @@ class CreateUserWordTable extends Migration {
             $t->integer('wrong')->unsigned();
 
             $t->primary(array('user_id', 'word_id'));
-            $t->foreign('user_id')->references('id')->on('users');
-            $t->foreign('word_id')->references('id')->on('words');
+            $t->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $t->foreign('word_id')->references('id')->on('words')->onDelete('cascade')->onUpdate('cascade');
         });
 	}
 

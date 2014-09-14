@@ -15,11 +15,10 @@ class CreateUserGroupTable extends Migration {
 		Schema::create('user_group', function($t) {
             $t->integer('user_id')->unsigned();
             $t->integer('group_id')->unsigned();
-            $t->boolean('activated');
 
             $t->primary(array('user_id', 'group_id'));
-            $t->foreign('user_id')->references('id')->on('users');
-            $t->foreign('group_id')->references('id')->on('groups');
+            $t->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $t->foreign('group_id')->references('id')->on('groups')->onDelete('cascade')->onUpdate('cascade');
         });
 	}
 

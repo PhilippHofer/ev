@@ -1,4 +1,0 @@
-[2014-09-14 10:27:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<'' in C:\xampp\htdocs\EV\app\storage\views\3957fe6259d001a9091f7059470d46c8:21
-Stack trace:
-#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
-#1 {main} [] []

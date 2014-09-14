@@ -18,7 +18,7 @@ class CreateWordsTable extends Migration {
             $t->char('english',100);
             $t->char('german',100);
             $t->timestamps();
-            $t->foreign('group_id')->references('id')->on('groups');
+            $t->foreign('group_id')->references('id')->on('groups')->onDelete('cascade')->onUpdate('cascade');
         });
 	}
 
