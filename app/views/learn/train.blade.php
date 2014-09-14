@@ -9,15 +9,11 @@
 .hidden{
 	position: absolut;
     display: inline-block;
-    width: 200px;
-    height: 50px;
     background-color: white;
 }
 .visible.content{
     position: absolut;
     display: inline-block;
-    width: 200px;
-    height: 50px;
     background-color: white;
 }
 </style>
@@ -29,15 +25,17 @@
             <?php
             	$groups = Auth::user()->groups;
                 $counter = 0;
+                echo '<ul class="small-block-grid1 medium-block-grid-2 large-block-grid-3">';
                 foreach($groups as $group) {
                 	echo "<hr /><h5>".$group->name."</h5>";
                 	foreach($group->words as $word){
-                		echo '<div class="ui fade reveal">';
+                		echo '<li><div class="ui fade reveal">';
                 		echo '<span class="visible content">'.$word->german.'</span>';
                 		echo '<span class="hidden content">'.$word->english.'</span>';
-                		echo '</div><br />';
+                		echo '</div></li>';
                 	}
                 }
+                echo '</ul>';
             ?>
 			<br /><br />
             <a href="{{ URL::to('learn') }}" class="ui teal submit button">Fertig</a>
