@@ -5,65 +5,47 @@
     <div class="small-12 small-centered column">
         <div class="ui segment">
             <h3>Probetest</h3>
-            <hr/>
+            {{ Form::open(array('url' => 'test_result', 'method' => 'post', 'class' => 'ui form segment')) }}
+            <?php
+                $random = 50;
 
-            <h5>Gruppe 1</h5>
-            <table class="ui celled table segment">
-                <thead>
-                <tr>
-                    <th>Deutsch</th>
-                    <th>English</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Haus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Maus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Laus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Strauß</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                </tbody>
-            </table>
-            <hr/>
-            <h5>Gruppe 2</h5>
-            <table class="ui celled table segment">
-                <thead>
-                <tr>
-                    <th>Deutsch</th>
-                    <th>English</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Haus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Maus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Laus</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                <tr>
-                    <td>Strauß</td>
-                    <td><div class="ui large input"><input type="text"></div></td>
-                </tr>
-                </tbody>
-            </table>
+                $groups = Auth::user()->groups;
+                $counter = 0;
+                foreach($groups as $group) {
+                    echo '<table class="ui celled table segment">
+                            <thead>
+                                <tr>
+                                    <th>Deutsch</th>
+                                    <th>English</th>
+                                </tr>   
+                            </thead>
+                            <tbody>';
+                    echo "<hr />";
+                    echo "<h5>".$group->name."</h5>";
+                    foreach($group->words as $word)
+                    {
+                        echo "<tr>";
+                            $rand = rand(1,100);
+                            if($random > $rand){
+                                echo "<td>".$word->german."</td>";
+                                echo "<td><input type='text' name='input[]'/></td>";
+                                echo "<input type='hidden' name='language[]' value='eng' />";
+                            }else{
+                                echo "<td><input type='text' name='input[]'/></td>";
+                                echo "<input type='hidden' name='language[]' value='ger' />";
+                                echo "<td>".$word->english."</td>";    
+                            }
+                            $counter++;
+                            
 
-            <a href="{{ URL::to('learn') }}" class="ui purple submit button">Auswerten</a>
+                        echo "</tr>";
+                    }
+
+                    echo "</tbody></table>";
+                }
+            ?>
+            <input type="submit" value="Auswerten" class="ui purple submit button" />
+            {{ Form::close() }}
 
         </div>
     </div>
