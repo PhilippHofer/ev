@@ -158,7 +158,6 @@ function parseCsv(content){
 
 function insertVocab(group, german, english){
 	$.get( "insertVocab?group="+group+"&german="+german+"&english="+english, function( data ) {
-		location.reload();
 	});
 }
 </script>
