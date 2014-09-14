@@ -76,6 +76,9 @@
         $('.ui.accordion').accordion();
         $('.ui.dropdown').dropdown();
     </script>
+    @section('scripts')
+
+    @show
     </body>
 
 </html>
