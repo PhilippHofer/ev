@@ -50,6 +50,77 @@ class JsonController extends BaseController {
         }
     }
 
+    public function checkWord() {
+        $id = Input::get('word');
+        $mode = Input::get('mode');
+        $value = Input::get('value');
+
+        $user = Auth::user();
+        $words = $user->words();
+        $box = 1;
+        $correct = 0;
+        $wrong = 0;
+        $foundWord = null;
+        foreach($words->get() as $word) {
+            if($word->id == $id) {
+                $foundWord = $word;
+                $box = $word->box;
+                $correct = $word->correct;
+                $wrong = $word->wrong;
+                break;
+            }
+        }
+
+        if($foundWord != null) {    /* remove the old relation*/
+            $words->detach($id);
+        } else {
+            $foundWord = Word::find($id);
+        }
+
+
+        /* check the input */
+        $correctValue = $foundWord->english;
+        if($mode == 'english') {
+            $correctValue = $foundWord->german;
+        }
+        $result = 'success';
+        if(JsonController::correctInput($value, $correctValue)){
+            $correct++;
+            $box++;
+        } else {
+            $result = 'error';
+            $wrong++;
+            $box--;
+        }
+
+        /* add the new word */
+        if($box < 1) { $box = 1; }
+        $words->attach($id, array('box_level' => $box, 'correct' => $correct, 'wrong' => $wrong));
+
+        /* create new box statistic */
+        $jc = new JsonController();
+        $words = $jc->userWords();
+        $boxes = array();
+        $countWords = 0;
+        foreach($words as $word){
+            $box = $word->box;
+            if(!array_key_exists($box, $boxes)) {
+                $boxes[$box] = 1;
+            } else {
+                $boxes[$box]++;
+            }
+            $countWords++;
+        }
+        ksort($boxes);
+
+        $back = array(
+            'result' => $result,
+            'countWords' => $countWords,
+            'boxes' => $boxes
+        );
+        return json_encode($back);
+    }
+
 
     protected function array_to_sql_list($array) {
         return '(' . implode(',', $array) . ')';
@@ -60,6 +131,24 @@ class JsonController extends BaseController {
         {
             return $object->id;
         });
+    }
+
+    public static function correctInput($input, $correct){
+        $input = str_replace(' ', '', $input);
+        $correct = str_replace(' ', '', $correct);
+
+        $input_array = explode("/",$input);
+        $correct_array = explode("/",$correct);
+
+        foreach ($input_array as $singleSolutionInput) {
+            foreach($correct_array as $singleSolutionCorrect){
+                $percent;
+                similar_text(strtolower($singleSolutionInput), strtolower($singleSolutionCorrect), $percent);
+                if($percent>=80) return(true);
+            }
+        }
+
+        return(false);
     }
 
 }

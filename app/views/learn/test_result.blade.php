@@ -28,14 +28,14 @@
                     {
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
-                                if(correctInput($inputTmp,$word->german)){ 
+                                if(JsonController::correctInput($inputTmp,$word->german)){
                                     $correct++; 
                                 }else{   
                                     $wrong++;
                                 }
                             }else{
                                 $inputTmp = array_pop($input);
-                                if(correctInput($inputTmp,$word->english)){ 
+                                if(JsonController::correctInput($inputTmp,$word->english)){
                                     $correct++; 
                                 }else{   
                                     $wrong++;
@@ -86,7 +86,7 @@
                         echo "<tr>";
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
-                                if(correctInput($inputTmp,$word->german) == 0){
+                                if(JsonController::correctInput($inputTmp,$word->german) == 0){
                                     echo "<td><font color='green'>".$inputTmp."</font></td>";   
                                     $correct++; 
                                 }else{
@@ -99,7 +99,7 @@
                                 echo "<td>".$word->german."</td>";
 
                                 $inputTmp = array_pop($input);
-                                if(correctInput($inputTmp,$word->english)){
+                                if(JsonController::correctInput($inputTmp,$word->english)){
                                     echo "<td><font color='green'>".$inputTmp."</font></td>";   
                                     $correct++; 
                                 }else{
@@ -119,23 +119,7 @@
                     
                 }
 
-                function correctInput($input, $correct){
-                    $input = str_replace(' ', '', $input);
-                    $correct = str_replace(' ', '', $correct);
 
-                    $input_array = explode("/",$input);
-                    $correct_array = explode("/",$correct);
-
-                    foreach ($input_array as $singleSolutionInput) {
-                        foreach($correct_array as $singleSolutionCorrect){
-                            $percent;
-                            similar_text(strtolower($singleSolutionInput), strtolower($singleSolutionCorrect), $percent);
-                            if($percent>=80) return(true);        
-                        }
-                    }
-
-                    return(false);
-                }
             ?>
 
         </div>
