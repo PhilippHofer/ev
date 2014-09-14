@@ -2,7 +2,6 @@
 
 class JsonController extends BaseController {
 
-
     public function allWords() {
         $group = Input::get('group_id');
         if($group == null){
