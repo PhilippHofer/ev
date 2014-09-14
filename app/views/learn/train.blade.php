@@ -26,11 +26,11 @@
     <div class="small-12 small-centered column">
         <div class="ui segment">
             <h3>Vokabeln Trainieren</h3>
-            <hr/>
             <?php
             	$groups = Auth::user()->groups;
                 $counter = 0;
                 foreach($groups as $group) {
+                	echo "<hr /><h5>".$group->name."</h5>";
                 	foreach($group->words as $word){
                 		echo '<div class="ui move reveal">';
                 		echo '<span class="visible content">'.$word->german.'</span>';
