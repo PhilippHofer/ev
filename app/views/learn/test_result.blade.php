@@ -6,12 +6,15 @@
         <div class="ui segment">
             <h3>Probetest - Auswertung</h3>
             <?php
+                $correct = 0;
+                $wrong = 0;
+
                 $language = array();
                 foreach($_POST['language'] as $item){
                     array_push($language, $item);
                 }
                 $language = array_reverse($language);
-                
+
                 $input = array();
                 foreach($_POST['input'] as $item){
                     array_push($input, $item);
@@ -37,9 +40,11 @@
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
                                 if(correctInput($inputTmp,$word->german) == 0){
-                                    echo "<td><font color='green'>".$inputTmp."</font></td>";    
+                                    echo "<td><font color='green'>".$inputTmp."</font></td>";   
+                                    $correct++; 
                                 }else{
                                     echo "<td><font color='red'>".$inputTmp."</font></td>";    
+                                    $wrong++;
                                 }
                                 
                                 echo "<td>".$word->english."</td>";
@@ -48,9 +53,11 @@
 
                                 $inputTmp = array_pop($input);
                                 if(correctInput($inputTmp,$word->english) == 0){
-                                    echo "<td><font color='green'>".$inputTmp."</font></td>";    
+                                    echo "<td><font color='green'>".$inputTmp."</font></td>";   
+                                    $correct++; 
                                 }else{
                                     echo "<td><font color='red'>".$inputTmp."</font></td>";    
+                                    $wrong++;
                                 }
                             }
                             
@@ -61,7 +68,14 @@
                     }
 
                     echo "</tbody></table>";
+
+                    
                 }
+                echo "Du hast ".$correct." von ".($correct+$wrong)." Wörtern richtig! Das sind ".(($correct / ($correct+$wrong))*100)."%!";
+                echo '<div class="ui blue progress">
+                        <div class="bar" style="width: '.(($correct / ($correct+$wrong))*100).'%;">
+                        </div>
+                    </div>';
 
                 function correctInput($input, $correct){
                     return(strcmp(strtolower($input),strtolower($correct)));
