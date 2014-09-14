@@ -27,6 +27,10 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
+Route::post('/uploadCsv', function()
+{
+
+})->before('auth');
 
 Route::post('/changePw', function()
 {

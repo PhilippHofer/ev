@@ -43,14 +43,36 @@
 			  </div>
 			  <div class="title">
 			    <i class="dropdown icon"></i>
-			    What kinds of dogs are there?
+			    Vocabulary
 			  </div>
+
+
+
 			  <div class="content">
-			    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+			    <div class="ui selection dropdown">
+				  <input id="selectAGroup" value="0" name="selectAGroup" type="hidden">
+				  <div class="text">Select your category</div>
+				  <i class="dropdown icon"></i>
+				  <div class="menu">
+				  	<?php
+		            	$groups = Group::all();
+						foreach($groups as $group){
+							echo '<div class="item" data-value="'.$group->id.'">'.$group->name.'</div>';		
+						}
+		      		?>
+				    
+				  </div>
+				</div>
+				<br /><br />
+				
+				<input id="uploadFile" name="uploadFile" type="file" size="50" maxlength="100000" accept="*.csv">   
+				<div class="ui vertical labeled icon buttons" onclick="uploadCsv();">
+					  <div class="ui button">
+					    <i class="file icon" ></i>Upload CSV
+					  </div>
+				</div>
 			  </div>
 			</div>
-
-<input type='text' value='test'/>
 
 
         </div>
@@ -69,12 +91,14 @@ function saveGroup(counter){
 	$("#edit"+counter).empty().append('<div class="ui button"onclick="editGroup('+counter+');"><i class="edit icon"></i></div>');
 	$("#"+counter).empty().append(text);
 	$.get( "changeGroup?action=update&id="+counter+"&to="+text, function( data ) {
+		location.reload();
 	});
 }
 
 function deleteGroup(counter){
 	$('#row'+counter).remove();
 	$.get( "changeGroup?action=delete&id="+counter, function( data ) {
+		location.reload();
 	});
 }
 
@@ -93,6 +117,20 @@ function insertGroupReally(){
 	$.get( "changeGroup?action=insert&name="+text, function( data ) {
 		location.reload();
 	});
+}
+
+function uploadCsv(){
+	var file = document.getElementById('uploadFile').files[0]; //Files[0] = 1st file
+	var reader = new FileReader();
+	reader.readAsText(file, 'UTF-8');
+	reader.onload = shipOff;
+}
+
+function shipOff(event) {
+    var result = event.target.result;
+    var fileName = document.getElementById('uploadFile').files[0].name; //Should be 'picture.jpg'
+    $.post('uploadCsv', { data: result, name: fileName, group: $("#selectAGroup").val() }, continueSubmission);
+}
 }
 </script>
 @stop

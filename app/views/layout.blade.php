@@ -70,7 +70,8 @@
            $(this).parent().hide();
         });
 
-        $('.ui.accordion') .accordion();
+        $('.ui.accordion').accordion();
+        $('.ui.dropdown').dropdown();
     </script>
     </body>
 
