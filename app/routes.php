@@ -37,6 +37,11 @@ Route::get('/insertVocab', function()
     return View::make('admin');
 })->before('auth');
 
+Route::post('/test_result', function()
+{
+    return View::make('learn.test_result');
+})->before('auth');
+
 
 Route::post('/uploadCsv', function()
 {
