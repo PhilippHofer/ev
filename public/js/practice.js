@@ -52,8 +52,16 @@ function submitWord() {
     $("#error").hide();
     $("#success").hide();
     var val = $("#wordInput").val();
-    if(val.length <= 0 || wait)
+    if(wait || currWord == null) {
         return;
+    }
+
+    if(val.length <= 0) {   // skip this word
+        words.push(currWord);
+        nextWord();
+        return;
+    }
+
 
     wait = true;
 
