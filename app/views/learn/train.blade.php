@@ -32,7 +32,7 @@
                 foreach($groups as $group) {
                 	echo "<hr /><h5>".$group->name."</h5>";
                 	foreach($group->words as $word){
-                		echo '<div class="ui move reveal">';
+                		echo '<div class="ui fade reveal">';
                 		echo '<span class="visible content">'.$word->german.'</span>';
                 		echo '<span class="hidden content">'.$word->english.'</span>';
                 		echo '</div><br />';
