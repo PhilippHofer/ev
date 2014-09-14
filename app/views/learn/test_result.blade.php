@@ -69,8 +69,13 @@
 
                     echo "</tbody></table>";
 
-                    echo "Du hast ".$correct." von ".($correct+$wrong)." Wörtern richtig! Das sind ".(($correct / ($correct+$wrong))*100)."%!";
+                    
                 }
+                echo "Du hast ".$correct." von ".($correct+$wrong)." Wörtern richtig! Das sind ".(($correct / ($correct+$wrong))*100)."%!";
+                echo '<div class="ui blue progress">
+                        <div class="bar" style="width: '.(($correct / ($correct+$wrong))*100).'%;">
+                        </div>
+                    </div>';
 
                 function correctInput($input, $correct){
                     return(strcmp(strtolower($input),strtolower($correct)));
