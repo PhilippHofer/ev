@@ -24,6 +24,53 @@
                 $groups = Auth::user()->groups;
                 $counter = 0;
                 foreach($groups as $group) {
+                    foreach($group->words as $word)
+                    {
+                            if(array_pop($language) == 'ger'){
+                                $inputTmp = array_pop($input);
+                                if(correctInput($inputTmp,$word->german) == 0){ 
+                                    $correct++; 
+                                }else{   
+                                    $wrong++;
+                                }
+                            }else{
+                                $inputTmp = array_pop($input);
+                                if(correctInput($inputTmp,$word->english) == 0){ 
+                                    $correct++; 
+                                }else{   
+                                    $wrong++;
+                                }
+                            }
+                            
+                        $counter++;
+                    }
+
+                    
+                }
+                echo "Du hast ".$correct." von ".($correct+$wrong)." Wörtern richtig! Das sind ".round((($correct / ($correct+$wrong))*100),2)."%!";
+                echo '<div class="ui blue progress">
+                        <div class="bar" style="width: '.(($correct / ($correct+$wrong))*100).'%;">
+                        </div>
+                    </div>';
+
+                    $correct = 0;
+                $wrong = 0;
+
+                $language = array();
+                foreach($_POST['language'] as $item){
+                    array_push($language, $item);
+                }
+                $language = array_reverse($language);
+
+                $input = array();
+                foreach($_POST['input'] as $item){
+                    array_push($input, $item);
+                }
+                $input = array_reverse($input);
+
+                $groups = Auth::user()->groups;
+                $counter = 0;
+                foreach($groups as $group) {
                     echo '<table class="ui celled table segment">
                             <thead>
                                 <tr>
@@ -71,11 +118,6 @@
 
                     
                 }
-                echo "Du hast ".$correct." von ".($correct+$wrong)." Wörtern richtig! Das sind ".(($correct / ($correct+$wrong))*100)."%!";
-                echo '<div class="ui blue progress">
-                        <div class="bar" style="width: '.(($correct / ($correct+$wrong))*100).'%;">
-                        </div>
-                    </div>';
 
                 function correctInput($input, $correct){
                     return(strcmp(strtolower($input),strtolower($correct)));
