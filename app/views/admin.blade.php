@@ -120,17 +120,39 @@ function insertGroupReally(){
 }
 
 function uploadCsv(){
-	var file = document.getElementById('uploadFile').files[0]; //Files[0] = 1st file
-	var reader = new FileReader();
-	reader.readAsText(file, 'UTF-8');
-	reader.onload = shipOff;
+	//Retrieve the first (and only!) File from the FileList object
+    var f = document.getElementById("uploadFile").files[0]; 
+
+    if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+	    var contents = e.target.result;
+        parseCsv(contents);
+      }
+      r.readAsText(f,'UTF-8');
+    } else { 
+      alert("Failed to load file");
+    }
 }
 
-function shipOff(event) {
-    var result = event.target.result;
-    var fileName = document.getElementById('uploadFile').files[0].name; //Should be 'picture.jpg'
-    $.post('uploadCsv', { data: result, name: fileName, group: $("#selectAGroup").val() }, continueSubmission);
+function parseCsv(content){
+	var group = $("#selectAGroup").val();
+	var lines = content.split(/\s+/g);
+	for(var i = 0;i<lines.length;i++){
+	   var match = lines[i];
+	   var keyValue = match.split(";");
+
+	   var german = keyValue[0];
+	   var english = keyValue[1];
+
+	   insertVocab(group,german,english);
+	}
 }
+
+function insertVocab(group, german, english){
+	$.get( "insertVocab?group="+group+"&german="+german+"&english="+english, function( data ) {
+		location.reload();
+	});
 }
 </script>
 @stop
