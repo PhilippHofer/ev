@@ -16,10 +16,12 @@ class ProfileController extends BaseController {
 
 	public function postIndex()
 	{
-        /* Delete all groups of current user */
 		$groups = Input::get('group');
+        if(!is_array($groups)) {
+            $groups = array();
+        }
         Auth::user()->groups()->sync($groups);
-        
-	    return View::make('profile');
+
+	    return Redirect::intended('profile')->with('status', 'success')->with('message', 'Gruppen erfolgreich aktualisiert');
 	}
 }

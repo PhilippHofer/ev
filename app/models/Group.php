@@ -7,4 +7,9 @@ class Group extends Eloquent {
         return $this->belongsToMany('User', 'user_group');
     }
 
+    public function words()
+    {
+        return $this->hasMany('Word');
+    }
+
 }
