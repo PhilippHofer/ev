@@ -17,66 +17,50 @@ class JsonController extends BaseController {
     }
 
     public function userWords($box = null) {
-        /* find all ids of the groups the current user has selected*/
         $groups = Auth::user()->groups;
-        $tmp = array();
+        $words = new \Illuminate\Database\Eloquent\Collection;
         foreach($groups as $group) {
-            array_push($tmp, $group->id);
-        }
-        $groupsSQL = $this->array_to_sql_list($tmp);
-        $groups = $tmp;
-
-        if($box == null) {  /* if no box is selected, return all words the user has selected */
-            return Word::whereRaw("group_id in $groupsSQL")->get()->toJson();
-        } else {
-            if($box == 1) { /* Show all words which are not in the user_word table or have the box_level 1 in the user_word table*/
-                // All the words the user has selected
-                $groups = Auth::user()->groups;
-                $words = new \Illuminate\Database\Eloquent\Collection;
-                foreach($groups as $group) {
-                    echo $group->name;
-                    foreach($group->words as $word)
-                    {
-                        echo $word
-                    }
-                }
-                return $words->toJson();
-                /*
-                // All words who are in the user_word table with the id of the current user
-                $existingwords = Auth::user()->words;
-                // filter out the words in box_level 1
-                $existingwords = $existingwords->filter(function($word)
-                {
-                    if($word->pivot->box_level > 1)
-                    {
-                        return $word;
-                    }
-                });
-                // Filter all the words who are in the user_word table and have a box_level > 1
-                $words = $words->filter(function($word) use($existingwords)
-                {
-                    if(!$existingwords->contains($word->id)){
-                        return $word;
-                    }
-                });
-                return $words;
-                */
-            } else {
-                $words = Auth::user()->words()->get();
-                $words = $words->filter(function($word) use ($groups, $box)
-                {
-                   if(in_array($word->group_id, $groups) && $word->pivot->box_level == $box) {
-                    return $word;
-                   }
-                });
-                return $words->toJson();
+            foreach($group->words as $word)
+            {
+                $words->add($word);
             }
+        }
+
+        $userWords = Auth::user()->words;
+        /* replace all the words, which are already in the list and also in user_word, to get the correct statistic numbers */
+        $userWords->each(function($word) use ($words)
+        {
+            if($words->contains($word->id)){
+                $words->find($word->id)->pivot = $word->pivot;
+            }
+        });
+
+        $words = $this->sortById($words);
+        if($box == null) {  /* if no box is selected, return all words the user has selected */
+            return $words->toJson();
+
+        } else {
+            $results = new \Illuminate\Database\Eloquent\Collection;
+            $words->each(function($word) use ($results, $groups, $box)
+            {
+                if($groups->contains($word->group_id) && $word->box == $box) {
+                    $results->add($word);
+                }
+            });
+            return $results->toJson();
         }
     }
 
 
     protected function array_to_sql_list($array) {
         return '(' . implode(',', $array) . ')';
+    }
+
+    protected function sortById($collection){
+        return $collection->sortBy(function($object)
+        {
+            return $object->id;
+        });
     }
 
 }

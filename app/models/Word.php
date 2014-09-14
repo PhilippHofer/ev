@@ -2,7 +2,9 @@
 
 class Word extends Eloquent {
 
-    protected $appends = array('correct', 'wrong');
+    protected $appends = array('correct', 'wrong', 'box');
+
+    protected $hidden = array('pivot', 'created_at', 'updated_at');
 
     public function group()
     {
@@ -15,7 +17,12 @@ class Word extends Eloquent {
     }
 
     public function getCorrectAttribute(){
-        return 0;
+        $pivot = $this->pivot;
+        if($pivot == null){
+            return 0;
+        } else {
+            return $pivot->correct;
+        }
     }
 
     public function getWrongAttribute(){
@@ -24,6 +31,15 @@ class Word extends Eloquent {
             return 0;
         } else {
             return $pivot->wrong;
+        }
+    }
+
+    public function getBoxAttribute(){
+        $pivot = $this->pivot;
+        if($pivot == null){
+            return 1;
+        } else {
+            return $pivot->box_level;
         }
     }
 

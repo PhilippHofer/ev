@@ -35,6 +35,9 @@
                         <li><a href="{{ URL::to('learn/test') }}">Probetest</a></li>
                     </ul>
                 </li>
+                @if(Auth::user() != null && Auth::user()->admin == 1)
+                <li><a href="{{ URL::to('admin') }}">Admin</a></li>
+                @endif
             </ul>
             <ul class="right"> <!-- Right Nav Section -->
                 <?php
