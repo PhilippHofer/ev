@@ -43,14 +43,36 @@
 			  </div>
 			  <div class="title">
 			    <i class="dropdown icon"></i>
-			    What kinds of dogs are there?
+			    Vocabulary
 			  </div>
+
+
+
 			  <div class="content">
-			    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+			    <div class="ui selection dropdown">
+				  <input id="selectAGroup" value="0" name="selectAGroup" type="hidden">
+				  <div class="text">Select your category</div>
+				  <i class="dropdown icon"></i>
+				  <div class="menu">
+				  	<?php
+		            	$groups = Group::all();
+						foreach($groups as $group){
+							echo '<div class="item" data-value="'.$group->id.'">'.$group->name.'</div>';		
+						}
+		      		?>
+				    
+				  </div>
+				</div>
+				<br /><br />
+				
+				<input id="uploadFile" name="uploadFile" type="file" size="50" maxlength="100000" accept="*.csv">   
+				<div class="ui vertical labeled icon buttons" onclick="uploadCsv();">
+					  <div class="ui button">
+					    <i class="file icon" ></i>Upload CSV
+					  </div>
+				</div>
 			  </div>
 			</div>
-
-<input type='text' value='test'/>
 
 
         </div>
@@ -69,12 +91,14 @@ function saveGroup(counter){
 	$("#edit"+counter).empty().append('<div class="ui button"onclick="editGroup('+counter+');"><i class="edit icon"></i></div>');
 	$("#"+counter).empty().append(text);
 	$.get( "changeGroup?action=update&id="+counter+"&to="+text, function( data ) {
+		location.reload();
 	});
 }
 
 function deleteGroup(counter){
 	$('#row'+counter).remove();
 	$.get( "changeGroup?action=delete&id="+counter, function( data ) {
+		location.reload();
 	});
 }
 
@@ -91,6 +115,42 @@ function insertGroupReally(){
 	$("#insertGroupButton").empty().append('<div class="ui blue labeled icon button" onclick="insertGroup();"><i class="lab icon"></i> Add Group</div>');
 
 	$.get( "changeGroup?action=insert&name="+text, function( data ) {
+		location.reload();
+	});
+}
+
+function uploadCsv(){
+	//Retrieve the first (and only!) File from the FileList object
+    var f = document.getElementById("uploadFile").files[0]; 
+
+    if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+	    var contents = e.target.result;
+        parseCsv(contents);
+      }
+      r.readAsText(f,'UTF-8');
+    } else { 
+      alert("Failed to load file");
+    }
+}
+
+function parseCsv(content){
+	var group = $("#selectAGroup").val();
+	var lines = content.split(/\s+/g);
+	for(var i = 0;i<lines.length;i++){
+	   var match = lines[i];
+	   var keyValue = match.split(";");
+
+	   var german = keyValue[0];
+	   var english = keyValue[1];
+
+	   insertVocab(group,german,english);
+	}
+}
+
+function insertVocab(group, german, english){
+	$.get( "insertVocab?group="+group+"&german="+german+"&english="+english, function( data ) {
 		location.reload();
 	});
 }

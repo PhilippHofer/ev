@@ -27,6 +27,29 @@ Route::get('/admin', function()
 	return View::make('admin');
 })->before('auth');
 
+Route::get('/insertVocab', function()
+{
+    $word = new Word;
+    $word->group_id = $_GET['group'];
+    $word->english = $_GET['english'];
+    $word->german = $_GET['german'];
+    $word->save();
+    return View::make('admin');
+})->before('auth');
+
+
+Route::post('/uploadCsv', function()
+{
+    $data = $_POST['data'];
+    $fileName = $_POST['fileName'];
+    $serverFile = time().$fileName;
+    $fp = fopen('/uploads/'.$serverFile,'w'); //Prepends timestamp to prevent overwriting
+    fwrite($fp, $data);
+    fclose($fp);
+    $returnData = array( "serverFile" => $serverFile );
+
+    return View::make('admin');
+})->before('auth');
 
 Route::post('/changePw', function()
 {
