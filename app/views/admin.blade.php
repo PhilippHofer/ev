@@ -144,7 +144,7 @@ function uploadCsv(){
 
 function parseCsv(content){
 	var group = $("#selectAGroup").val();
-	var lines = content.split(/\s+/g);
+	var lines = content.split("\n");
 	for(var i = 0;i<lines.length;i++){
 	   var match = lines[i];
 	   var keyValue = match.split(";");
