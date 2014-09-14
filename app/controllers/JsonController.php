@@ -6,13 +6,13 @@ class JsonController extends BaseController {
     public function allWords() {
         $group = Input::get('group_id');
         if($group == null){
-            return Word::all()->toJson();
+            return Word::all();
         } else {
             if(is_array($group)) {
                 $groups = JsonController::array_to_sql_list($group);
-                return Word::whereRaw("group_id in $groups")->get()->toJson();
+                return Word::whereRaw("group_id in $groups")->get();
             }
-            return Word::where('group_id', '=', $group)->get()->toJson();
+            return Word::where('group_id', '=', $group)->get();
         }
     }
 
@@ -37,7 +37,7 @@ class JsonController extends BaseController {
 
         $words = $this->sortById($words);
         if($box == null) {  /* if no box is selected, return all words the user has selected */
-            return $words->toJson();
+            return $words;
 
         } else {
             $results = new \Illuminate\Database\Eloquent\Collection;
@@ -47,7 +47,7 @@ class JsonController extends BaseController {
                     $results->add($word);
                 }
             });
-            return $results->toJson();
+            return $results;
         }
     }
 
