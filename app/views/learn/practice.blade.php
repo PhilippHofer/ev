@@ -65,9 +65,14 @@
                     <div id="text">
                         Bitte wähle eine Stufe aus.
                     </div>
+                    <div class="row">
+                        <div class="small-12 column">
+                            <h4 id="currBox"></h4>
+                        </div>
+                    </div>
                     <div class="row" id="inputForm" style="display: none">
                         <div class="small-12 medium-3 column small-text-left medium-text-right">
-                           <h4 id="word"></h4>
+                           <h5 id="word"></h5>
                         </div>
                         <div class="small-12 medium-6 column">
                             <div class="ui fluid action input">

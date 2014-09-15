@@ -10,6 +10,8 @@
                 $groups = Auth::user()->groups;
 
                 foreach($groups as $group) {
+                    echo "<hr />";
+                    echo "<h5>".$group->name."</h5>";
                     echo '<table class="ui celled table segment">
                             <thead>
                                 <tr>
@@ -18,8 +20,6 @@
                                 </tr>   
                             </thead>
                             <tbody>';
-                    echo "<hr />";
-                    echo "<h5>".$group->name."</h5>";
                     foreach($group->words as $word)
                     {
                         echo "<tr>";

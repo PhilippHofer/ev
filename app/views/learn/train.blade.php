@@ -3,18 +3,24 @@
 @section('content')
 <style>
 
-.ui move right reveal{
-	position:relative;
+ul li{
+    padding-bottom: 5px !important;
 }
-.hidden{
-	position: absolut;
-    display: inline-block;
+
+.ui.reveal{
+	position:relative;
+    width: 100%;
+}
+.hidden.content{
+	position: absolute;
+    display: block;
     background-color: white;
+    width: 100%;
 }
 .visible.content{
-    position: absolut;
-    display: inline-block;
-    background-color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
 }
 </style>
 
@@ -25,17 +31,19 @@
             <?php
             	$groups = Auth::user()->groups;
                 $counter = 0;
-                echo '<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
+
                 foreach($groups as $group) {
-                	echo "<hr /><h5>".$group->name."</h5>";
+                    echo "<hr /><h5>".$group->name."</h5>";
+                    echo '<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
                 	foreach($group->words as $word){
                 		echo '<li><div class="ui fade reveal">';
                 		echo '<span class="visible content">'.$word->german.'</span>';
                 		echo '<span class="hidden content">'.$word->english.'</span>';
                 		echo '</div></li>';
                 	}
+                    echo '</ul>';
                 }
-                echo '</ul>';
+
             ?>
 			<br /><br />
             <a href="{{ URL::to('learn') }}" class="ui teal submit button">Fertig</a>

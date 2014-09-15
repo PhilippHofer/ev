@@ -2,6 +2,8 @@ var words = null;
 var currWord = null;
 var mode = null;   // englisch or german
 var wait = true;    // wait for response of check
+var currBox = 0;
+var lastQuestion = null;
 
 $(document).ready(function(){
     $("#wordInput").bind("enterKey", function(e){
@@ -17,10 +19,13 @@ $(document).ready(function(){
 });
 
 function chooseBox(box) {
+    if(box < 1) box = 1;
     var path = "/json/words/box/" + box;
     console.log(path);
     $.get(path, function( data ) {
+        currBox = box;
         words = shuffle(data);
+        $("#currBox").html("Stufe " + box);
         nextWord();
     });
 }
@@ -34,16 +39,17 @@ function nextWord() {
     }
     var r = Math.random()*100;
     currWord = words.shift();
-    var question = currWord['english'];
+
+    lastQuestion = getRandomValue(currWord['english']);
     mode = 'english';
     if(r < percent) {   /* German */
-        question = currWord['german'];
+        lastQuestion = getRandomValue(currWord['german']);
         mode = 'german';
     }
 
     $("#text").hide();
     $("#inputForm").show();
-    $("#word").html(getRandomValue(question));
+    $("#word").html(lastQuestion);
     $("#wordInput").val("");
     wait = false;
 }
@@ -70,12 +76,15 @@ function submitWord() {
         var result = data['result'];
         var countWords = data['countWords'];
         var boxes = data['boxes'];
+
+        var corrResult = (mode == 'english' ? currWord['german'] : currWord['english']);
+
         if(result == 'success') {
             $("#success").show();
-            $("#successContent").html('Letztes wort war richtig! <ul><li>' + getRandomValue(currWord['german']) + ' =>' + getRandomValue(currWord['english']) + "</li></ul>");
+            $("#successContent").html('Letztes wort war richtig! <ul><li>' + lastQuestion + ' =>' + corrResult + "</li></ul>");
         } else {
             $("#error").show();
-            $("#errorContent").html('Letztes wort war falsch! <ul><li>' + getRandomValue(currWord['german']) + ' =>' + getRandomValue(currWord['english']) + '</li><li>du hast eingeben: "' + val + '" </li></ul>');
+            $("#errorContent").html('Letztes wort war falsch! <ul><li>' + lastQuestion + ' =>' + corrResult + '</li><li>du hast eingeben: "' + val + '" </li></ul>');
         }
 
         // update boxes
@@ -97,7 +106,16 @@ function submitWord() {
 
         $("#boxes").html(boxHTML);
 
-        nextWord();
+        if(words.length < 1) {  // if the box is empty now
+            if(result == 'success') {
+                chooseBox(currBox+1);
+            } else {
+                chooseBox(currBox-1);
+            }
+        } else {
+            nextWord();
+        }
+
     });
 
 
@@ -125,6 +143,5 @@ function shuffle(array) {
 function getRandomValue(word) {
     var split = word.split("/");
 
-    var ret =  split[Math.floor(Math.random()*split.length)];
-    return ret;
+    return split[Math.floor(Math.random()*split.length)];
 }
