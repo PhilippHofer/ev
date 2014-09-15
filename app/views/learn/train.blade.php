@@ -1,5 +1,24 @@
 @extends('layout')
 
+@section('scripts')
+<script>
+
+    $("#words li div").each(function(){
+        var biggestHeight = 0;
+        $(this).children().each(function(){
+            if ($(this).height() > biggestHeight ) {
+                biggestHeight = $(this).height();
+            }
+        });
+        $(this).height(biggestHeight);
+        $(this).children().each(function(){
+            $(this).height(biggestHeight);
+        });
+    });
+
+</script>
+@show
+
 @section('content')
 <style>
 
@@ -18,7 +37,7 @@ ul li{
     width: 100%;
 }
 .visible.content{
-    position: absolute;
+    position: relative;
     display: block;
     width: 100%;
 }
@@ -34,7 +53,7 @@ ul li{
 
                 foreach($groups as $group) {
                     echo "<hr /><h5>".$group->name."</h5>";
-                    echo '<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
+                    echo '<ul id="words" class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">';
                 	foreach($group->words as $word){
                 		echo '<li><div class="ui fade reveal">';
                 		echo '<span class="visible content">'.$word->german.'</span>';
@@ -50,6 +69,7 @@ ul li{
         </div>
     </div>
 </div>
+
 
 
 @stop
