@@ -74,6 +74,10 @@ class UserTableSeeder extends Seeder {
             'password' => Hash::make('englisch')
         ));
         User::create(array(
+            'username' => 'Julian Schulner',
+            'password' => Hash::make('englisch')
+        ));
+        User::create(array(
             'username' => 'Patrick Weiß',
             'password' => Hash::make('englisch')
         ));
