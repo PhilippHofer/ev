@@ -62,11 +62,13 @@ function submitWord() {
         return;
     }
 
+    /* Feature removed
     if(val.length <= 0) {   // skip this word
         words.push(currWord);
         nextWord();
         return;
     }
+    */
 
 
     wait = true;
@@ -105,6 +107,11 @@ function submitWord() {
         }
 
         $("#boxes").html(boxHTML);
+
+        /* if the word was in box 1 and it was wrong, add it again, because it didn't fall down*/
+        if(currBox == 1 && result == 'error') {
+            words.push(currWord);
+        }
 
         if(words.length < 1) {  // if the box is empty now
             if(result == 'success') {
