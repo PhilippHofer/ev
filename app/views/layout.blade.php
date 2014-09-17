@@ -35,6 +35,7 @@
                         <li><a href="{{ URL::to('learn/test') }}">Probetest</a></li>
                     </ul>
                 </li>
+                <li><a href="{{ URL::to('stats') }}">Statistik</a></li>
                 @if(Auth::user() != null && Auth::user()->admin == 1)
                 <li><a href="{{ URL::to('admin') }}">Admin</a></li>
                 @endif

@@ -42,6 +42,8 @@ Route::post('/test_result', function()
     return View::make('learn.test_result');
 })->before('auth');
 
+Route::controller('/stats', 'StatsController');
+
 
 Route::post('/uploadCsv', function()
 {
