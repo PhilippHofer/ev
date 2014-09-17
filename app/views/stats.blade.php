@@ -38,12 +38,12 @@
                             @endforeach
                         </thead>
                         <tbody>
-                            <?php $i = 1;?>
+                            <?php $i = 1; ?>
                             @foreach($data as $row)
                             <tr>
                             <td>{{ $i }}.</td>
                                 @foreach($colNames as $col)
-                                    <td>{{{ $row->$col }}}</td>
+                                    <td>{{{ str_replace('/', ' / ', $row->$col) }}}</td>
                                 @endforeach
                             </tr>
                             <?php $i++; ?>
