@@ -21,21 +21,36 @@
                 }
                 $input = array_reverse($input);
 
+                $statement = array();
+                foreach($_POST['statement'] as $item){
+                    array_push($statement, $item);
+                }
+                $statement = array_reverse($statement);
+
+                $statement2 = array();
+                foreach($_POST['statement2'] as $item){
+                    array_push($statement2, $item);
+                }
+                $statement2 = array_reverse($statement2);
+
                 $groups = Auth::user()->groups;
                 $counter = 0;
                 foreach($groups as $group) {
-                    foreach($group->words as $word)
+                   foreach($group->words as $word)
                     {
+                            $correctTmp = array_pop($statement);
+                            $statement2Tmp = array_pop($statement2);
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
-                                if(JsonController::correctInput($inputTmp,$word->german)){
+                                if(JsonController::correctInput($inputTmp,$statement2Tmp)){   
                                     $correct++; 
-                                }else{   
+                                }else{ 
                                     $wrong++;
                                 }
+                                
                             }else{
                                 $inputTmp = array_pop($input);
-                                if(JsonController::correctInput($inputTmp,$word->english)){
+                                if(JsonController::correctInput($inputTmp,$statement2Tmp)){  
                                     $correct++; 
                                 }else{   
                                     $wrong++;
@@ -43,6 +58,9 @@
                             }
                             
                         $counter++;
+                            
+
+                        echo "</tr>";
                     }
 
                     
@@ -68,6 +86,18 @@
                 }
                 $input = array_reverse($input);
 
+                $statement = array();
+                foreach($_POST['statement'] as $item){
+                    array_push($statement, $item);
+                }
+                $statement = array_reverse($statement);
+
+                $statement2 = array();
+                foreach($_POST['statement2'] as $item){
+                    array_push($statement2, $item);
+                }
+                $statement2 = array_reverse($statement2);
+
                 $groups = Auth::user()->groups;
                 $counter = 0;
                 foreach($groups as $group) {
@@ -84,9 +114,11 @@
                     foreach($group->words as $word)
                     {
                         echo "<tr>";
+                            $correctTmp = array_pop($statement);
+                            $statement2Tmp = array_pop($statement2);
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
-                                if(JsonController::correctInput($inputTmp,$word->german)){
+                                if(JsonController::correctInput($inputTmp,$statement2Tmp)){
                                     echo "<td><font color='green'>".$inputTmp."</font></td>";   
                                     $correct++; 
                                 }else{
@@ -94,12 +126,14 @@
                                     $wrong++;
                                 }
                                 
-                                echo "<td>".$word->english."</td>";
+                                echo "<td>".$correctTmp."</td>";
                             }else{
-                                echo "<td>".$word->german."</td>";
+
+                                
 
                                 $inputTmp = array_pop($input);
-                                if(JsonController::correctInput($inputTmp,$word->english)){
+                                echo "<td>".$correctTmp."</td>";
+                                if(JsonController::correctInput($inputTmp,$statement2Tmp)){
                                     echo "<td><font color='green'>".$inputTmp."</font></td>";   
                                     $correct++; 
                                 }else{

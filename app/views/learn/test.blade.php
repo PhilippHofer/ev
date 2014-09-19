@@ -33,9 +33,13 @@
                                 echo "<td>".$word->german."</td>";
                                 echo "<td><input type='text' name='input[]'/></td>";
                                 echo "<input type='hidden' name='language[]' value='eng' />";
+                                echo "<input type='hidden' name='statement[]' value='".$word->german."' />";
+                                echo "<input type='hidden' name='statement2[]' value='".$word->english."' />";
                             }else{
                                 echo "<td><input type='text' name='input[]'/></td>";
                                 echo "<input type='hidden' name='language[]' value='ger' />";
+                                echo "<input type='hidden' name='statement[]' value='".$word->english."' />";
+                                echo "<input type='hidden' name='statement2[]' value='".$word->german."' />";
                                 echo "<td>".$word->english."</td>";    
                             }
                             $counter++;
