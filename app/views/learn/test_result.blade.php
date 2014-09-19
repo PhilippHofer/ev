@@ -86,7 +86,7 @@
                         echo "<tr>";
                             if(array_pop($language) == 'ger'){
                                 $inputTmp = array_pop($input);
-                                if(JsonController::correctInput($inputTmp,$word->german) == 0){
+                                if(JsonController::correctInput($inputTmp,$word->german)){
                                     echo "<td><font color='green'>".$inputTmp."</font></td>";   
                                     $correct++; 
                                 }else{
