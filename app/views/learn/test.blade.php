@@ -22,7 +22,10 @@
                             <tbody>';
                     echo "<hr />";
                     echo "<h5>".$group->name."</h5>";
-                    foreach($group->words as $word)
+
+                    $group_words = shuffle_assoc(iterator_to_array($group->words));
+
+                    foreach($group_words as $word)
                     {
                         echo "<tr>";
                             $rand = rand(1,100);
@@ -43,6 +46,19 @@
 
                     echo "</tbody></table>";
                 }
+
+                function shuffle_assoc($list) { 
+                    if(!is_array($list)) echo "!!!!!!!!!!!!!!!!!!!!";
+                  if (!is_array($list)) return $list; 
+
+                  $keys = array_keys($list); 
+                  shuffle($keys); 
+                  $random = array(); 
+                  foreach ($keys as $key) { 
+                    $random[$key] = $list[$key]; 
+                  }
+                  return $random; 
+                } 
             ?>
             <input type="submit" value="Auswerten" class="ui purple submit button" />
             {{ Form::close() }}
